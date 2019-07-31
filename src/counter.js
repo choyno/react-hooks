@@ -1,5 +1,5 @@
-import React from 'react';
-const ErrorComponent  =  () => <div>{props.ignore}</div>;
+import React from 'react'
+//const ErrorComponent  =  () => <div>{ props.ignore }</div>
 
 class Counter extends React.Component {
   constructor(props){
@@ -25,7 +25,7 @@ class Counter extends React.Component {
         counter: props.seed
       }
     }
-    return null;
+    return null
   }
 
   componentDidMount (){
@@ -54,9 +54,9 @@ class Counter extends React.Component {
   render () {
 
     console.log("Render - Page Load or event click")
-    if (this.state.error){
-      return <div>We Encounter an error { this.state.error.message }<div>
-    }
+    //if (this.state.error){
+    //  return <div>We Encounter an error { this.state.error.message }<div>
+    //}
 
     return <div>
       <button className="btn-default" onClick={this.increment}>Incremenet</button>
@@ -64,23 +64,23 @@ class Counter extends React.Component {
       <div className="Counter">
         <h1> Counter: {this.state.counter} </h1>
       </div>
-      <ErrorComponent/>
     </div>
   }
 
   componentDidUpdate (prevProps, prevState, snapshot){
-    console.log("Component Did Update - Trigger on Event Click")
+    console.log('Component Did Update - Trigger on Event Click')
     console.log('---------------------')
   }
 
   componentWillUnmount () {
-    console.log("Component Will UnMount trigger on parent if not display/render")
+    console.log('Component Will UnMount trigger on parent if not display/render')
     console.log("--------------------------------------")
   }
 
   componentDidCatch (error, info){
     console.log('Component did Catch')
     this.setState({error, info})
+    //<ErrorComponent/>
   }
 
 }

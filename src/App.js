@@ -1,6 +1,6 @@
-import React from 'react';
-import './App.css';
-import Counter from './counter';
+import React from 'react'
+import './App.css'
+import Counter from './counter'
 
 class App extends React.Component {
   constructor(props){
@@ -33,7 +33,6 @@ class App extends React.Component {
       </div>
     </div>
   }
-
 }
 
 export default App;
